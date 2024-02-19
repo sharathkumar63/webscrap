@@ -14,7 +14,7 @@ Step 2: Write the scraping script
 Open scrape_pulse_zerodha.py and write the code to scrape the website, extract data, and store it in the PostgreSQL database.
 python
 Copy code
-# scrape_pulse_zerodha.py
+# scrape_pulse.py
 
 import requests
 from bs4 import BeautifulSoup
