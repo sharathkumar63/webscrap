@@ -1,20 +1,20 @@
-Here's a step-by-step approach to scraping the website, storing the data in a PostgreSQL database, and containerizing the process using Docker Compose:
+Below is the modified content with "sample" instead of "Zerodha":
 
 Step 1: Create a directory structure
 
-Create a directory named pulse_zerodha_scraping.
-Inside this directory, create the following files: Dockerfile, docker-compose.yml, requirements.txt, scrape_pulse_zerodha.py.
+Create a directory named pulse_sample_scraping.
+Inside this directory, create the following files: Dockerfile, docker-compose.yml, requirements.txt, scrape_pulse_sample.py.
 bash
 Copy code
-mkdir pulse_zerodha_scraping
-cd pulse_zerodha_scraping
-touch Dockerfile docker-compose.yml requirements.txt scrape_pulse_zerodha.py
+mkdir pulse_sample_scraping
+cd pulse_sample_scraping
+touch Dockerfile docker-compose.yml requirements.txt scrape_pulse_sample.py
 Step 2: Write the scraping script
 
-Open scrape_pulse_zerodha.py and write the code to scrape the website, extract data, and store it in the PostgreSQL database.
+Open scrape_pulse_sample.py and write the code to scrape the website, extract data, and store it in the PostgreSQL database.
 python
 Copy code
-# scrape_pulse.py
+# scrape_pulse_sample.py
 
 import requests
 from bs4 import BeautifulSoup
@@ -52,7 +52,7 @@ def insert_into_database(data):
 
 # Main function
 def main():
-    url = "https://pulse.zerodha.com/"
+    url = "https://pulse.sample.com/"
     data = scrape_website(url)
     insert_into_database(data)
 
@@ -73,7 +73,7 @@ COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "./scrape_pulse_zerodha.py"]
+CMD ["python", "./scrape_pulse_sample.py"]
 Step 4: Write docker-compose.yml
 
 Open docker-compose.yml and define the services for your application.
@@ -109,4 +109,8 @@ The scraping script will be executed inside the container, fetching data and sto
 bash
 Copy code
 docker-compose up --build
-This setup will scrape the Pulse Zerodha website, store the extracted data in the PostgreSQL database, and containerize the process using Docker Compose. Make sure to replace placeholders (e.g., your_database, your_username, etc.) with your actual database credentials. Adjust the code and configuration files according to your specific requirements and environment.
+Adjust the code and configuration files according to your specific requirements and environment. Make sure to replace placeholders (e.g., your_database, your_username, etc.) with your actual database credentials.
+
+
+
+
